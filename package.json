@@ -1,15 +1,15 @@
 {
   "name": "use-timed-flow",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A tiny React hook to manage timed UI flows: auto-advance, pause, resume, reset, and loop — with zero timeout spaghetti.",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup src/index.ts --format esm --dts --clean",
     "dev": "tsc -w",
     "test": "vitest",
     "lint": "eslint src --ext .ts,.tsx",
