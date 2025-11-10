@@ -1,4 +1,4 @@
-import { renderHook, act } from "@testing-library/react-hooks";
+import { renderHook, act } from "@testing-library/react";
 import { useTimedFlow } from "../useTimedFlow";
 import { vi, describe, afterEach, test, expect } from "vitest";
 
@@ -12,7 +12,7 @@ describe("useTimedFlow", () => {
 
   test("auto-advances steps with delay", () => {
     const { result } = renderHook(() =>
-      useTimedFlow({ steps: 3, delay: 1000, autoStart: true })
+      useTimedFlow({ steps: 3, delay: 1000, autoStart: true }),
     );
 
     expect(result.current.current).toBe(0);
@@ -30,7 +30,7 @@ describe("useTimedFlow", () => {
 
   test("pause and resume preserves remaining time", () => {
     const { result } = renderHook(() =>
-      useTimedFlow({ steps: 2, delay: 2000, autoStart: true })
+      useTimedFlow({ steps: 2, delay: 2000, autoStart: true }),
     );
 
     act(() => {
@@ -53,7 +53,7 @@ describe("useTimedFlow", () => {
 
   test("reset moves to the given index and respects autoStart", () => {
     const { result } = renderHook(() =>
-      useTimedFlow({ steps: 4, delay: 500, autoStart: false })
+      useTimedFlow({ steps: 4, delay: 500, autoStart: false }),
     );
 
     act(() => {
@@ -71,7 +71,7 @@ describe("useTimedFlow", () => {
 
   test("manual next and prev methods work correctly", () => {
     const { result } = renderHook(() =>
-      useTimedFlow({ steps: 3, delay: 1000, autoStart: false })
+      useTimedFlow({ steps: 3, delay: 1000, autoStart: false }),
     );
 
     expect(result.current.current).toBe(0);
@@ -94,7 +94,7 @@ describe("useTimedFlow", () => {
 
   test("manual goTo works correctly", () => {
     const { result } = renderHook(() =>
-      useTimedFlow({ steps: 5, delay: 1000, autoStart: false })
+      useTimedFlow({ steps: 5, delay: 1000, autoStart: false }),
     );
 
     act(() => {
@@ -110,7 +110,7 @@ describe("useTimedFlow", () => {
 
   test("looping works for next and prev", () => {
     const { result } = renderHook(() =>
-      useTimedFlow({ steps: 3, delay: 1000, autoStart: false, loop: true })
+      useTimedFlow({ steps: 3, delay: 1000, autoStart: false, loop: true }),
     );
 
     act(() => {
@@ -127,7 +127,7 @@ describe("useTimedFlow", () => {
 
   test("multiple pause/resume cycles work correctly", () => {
     const { result } = renderHook(() =>
-      useTimedFlow({ steps: 2, delay: 1000, autoStart: true })
+      useTimedFlow({ steps: 2, delay: 1000, autoStart: true }),
     );
 
     act(() => {

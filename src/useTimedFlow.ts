@@ -42,7 +42,7 @@ export const useTimedFlow = ({
         });
       }, ms);
     },
-    [clearTimer, delay, loop, steps]
+    [clearTimer, delay, loop, steps],
   );
 
   const pause = useCallback(() => {
@@ -82,7 +82,7 @@ export const useTimedFlow = ({
       if (index < 0 || index >= steps) return;
       setCurrent(index);
     },
-    [steps]
+    [steps],
   );
 
   const reset = useCallback(
@@ -93,7 +93,7 @@ export const useTimedFlow = ({
       setRunning(autoStart);
       if (autoStart) scheduleNext(delay);
     },
-    [autoStart, clearTimer, delay, scheduleNext]
+    [autoStart, clearTimer, delay, scheduleNext],
   );
 
   useEffect(() => {
