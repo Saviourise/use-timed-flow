@@ -1,4 +1,4 @@
-interface UseTimedFlowOptions {
+export interface UseTimedFlowOptions {
   /** Number of steps to cycle through (e.g. slides length) */
   steps: number;
   /** Delay for each step in milliseconds (default 2000) */
@@ -11,7 +11,7 @@ interface UseTimedFlowOptions {
   onStepChange?: (step: number) => void;
 }
 
-interface UseTimedFlowReturn {
+export interface UseTimedFlowReturn {
   current: number;
   running: boolean;
   pause: () => void;
@@ -22,7 +22,7 @@ interface UseTimedFlowReturn {
   goTo: (index: number) => void;
 }
 
-interface UseTimedFlowProps {
+export interface UseTimedFlowProps {
   steps: number;
   delay: number; // ms
   autoStart?: boolean;

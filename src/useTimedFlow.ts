@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from "react";
+import type { UseTimedFlowProps, UseTimedFlowReturn } from "./types";
 
 export const useTimedFlow = ({
   steps,
