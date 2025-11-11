@@ -2,6 +2,10 @@
 
 A tiny React hook to manage timed UI flows: auto-advance, pause, resume, reset, and loop — without timeout spaghetti.
 
+# Documentation
+
+[View the full documentation](https://saviee-libraries.onrender.com/libraries/use-timed-flow)
+
 ## Install
 
 ```bash
@@ -34,7 +38,7 @@ function Carousel({ items }: { items: string[] }) {
 
 ## API
 
-See `src/types.ts` for the typed API.
+See `src/types.d.ts` for the typed API.
 
 ## License
 
