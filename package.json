@@ -1,6 +1,6 @@
 {
   "name": "use-timed-flow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny React hook to manage timed UI flows: auto-advance, pause, resume, reset, and loop — with zero timeout spaghetti.",
   "homepage": "https://saviee-libraries.onrender.com/libraries/use-timed-flow",
   "repository": {
